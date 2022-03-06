@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "Enter the file path"
-read file
+read VAR
 
 length=$(echo -n "$str" | wc -c)
 extend="_comment_removed.sh"
-FILE="${file:0:$(($length-3))}$extend"
+FILE="${VAR:0:$(($length-3))}$extend"
 
 echo "Find the file after removing comment here:"
 echo "$FILE"
