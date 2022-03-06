@@ -1,29 +1,29 @@
 #!/bin/bash
 
 echo -n "Enter the source: "
-read source
+read SOURCE
 echo -n "Enter the destination: "
-read destination
+read DEST
 
-if [ -f $source ]
+if [ -f $SOURCE ]
 then
-     if [ -f $destination ]
+     if [ -f $DEST ]
      then
-          n=$(wc -l < $destination)
+          n=$(wc -l < $DEST)
           if [ $n -ne 0 ]
           then
-               echo -n "Overwrite $destination ? (y/n): "
+               echo -n "Overwrite $DEST ? (y/n): "
                read ch
                if [ $ch == 'y' ]
                then
-                   cp $source $destination
+                   cp $SOURCE $DEST
                else
                    exit
                fi
           fi
      else
-         cp $source $destination
+         cp $SOURCE $DEST
      fi
 else
-    echo "$source file does not exist"
+    echo "$SOURCE file does not exist"
 fi
