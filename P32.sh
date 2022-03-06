@@ -3,7 +3,7 @@
 echo "Enter the file path"
 read VAR
 
-length=$(echo -n "$str" | wc -c)
+length=$(echo -n "$VAR" | wc -c)
 extend="_comment_removed.sh"
 FILE="${VAR:0:$(($length-3))}$extend"
 
