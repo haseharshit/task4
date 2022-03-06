@@ -6,7 +6,7 @@ chars=$(wc -c < $FILE)
 words=$(wc -w < $FILE)
 lines=$(wc -l < $FILE)
 
-echo "The number of charcters,words and lines in $file are :"
+echo "The number of charcters,words and lines in $FILE are :"
 echo "Characters: $chars"
 echo "Words: $words"
 echo "Lines: $lines"
